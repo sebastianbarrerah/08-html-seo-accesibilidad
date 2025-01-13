@@ -126,19 +126,26 @@
         <h1 class="hero__title">
           Designers, welcome home.
         </h1>
-        <div>
-          <p>Sketch is a toolkit made by designers, for designers, that puts the focus on you and your work.</p>
-          <a href="#">Get started for free <i>D</i></a>
-          <small>Requires macOS Ventura (13.0.0) or newer.</small>
+        <div class="hero__container">
+          <p class="hero__description">Sketch is a toolkit made by designers, for designers, that puts the focus on you and your work.</p>
+          <a class="hero__button" href="#">
+            <span>
+              Get started for free
+              <i aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="main-nav__link__icon"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m16 11-4 4-4-4M12 13.5v-9M4 20h16"></path></g></svg>
+              </i>
+            </span>
+          </a>
+          <small class="hero__requirements">Requires macOS Ventura (13.0.0) or newer.</small>
           <!-- <abbr title="Hyper Text Markup Language">HTML</abbr> -->
         </div>
       </div>
 
       <article role="banner">
-        <a href="#">
-          <video src="./images/sketch-in-2024.mp4"></video>
-          <div>
-            <h5>Our favorite features from 2024 — and what’s next</h5>
+        <a href="#" class="banner">
+          <video autoplay muted loop playsinline class="banner__video" src="./images/sketch-in-2024.mp4"></video>
+          <div class="banner__container">
+            <h5 class="banner__title">Our favorite features from 2024 — and what’s next</h5>
             <p>
               Join us as we highlight our favorite features from 2024 and take a look at what’s ahead. <span> Read the
                 blog post</span>
