@@ -189,3 +189,19 @@ html {
 .banner__title {
   font-size: 17px;
 }
+
+.bento {
+  max-width: 1368px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.bento__item {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #e4d7d7;
+  padding: 20px;
+
+}
