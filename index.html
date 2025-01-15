@@ -1,28 +1,112 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/style.scss" />
-    <link rel="icon" href="./public/images/favicon.ico" type="image/svg+xml" />
-    <title>Your connected workspace for wiki, docs &amp; projects | Notion</title>
-  </head>
-  <body>
 
-    <header class="header">
-      <object type="image/svg+xml" data="public/svg/notion.svg" aria-label="Logo de Figma"></object>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/style.scss" />
+  <link rel="icon" href="./public/images/favicon.ico" type="image/svg+xml" />
+  <title>Your connected workspace for wiki, docs & amp; projects | Notion</title>
+</head>
 
-    </header>
+<body>
+  <header class="header">
+    <nav>
+      <menu class="menu">
 
-    <main class="main">
-    </main>
+        <li class="menu__item">
+          <a href="/">
+            <i class="menu__logo">
+              <img src="./public/svg/notion.svg" alt="logo de notion" aria-label="Logo de Figma" class="header__logo">
+            </i>
+          </a>
+        </li>
 
-    <footer class="footer">
+        <li class="menu__item">
+          <span>Product</span>
+          <i>
+            <img src="./public/icon/arrow-bottom.svg" alt="Logo items" aria-label="Logo items">
+          </i>
+        </li>
 
-    </footer>
+        <li class="menu__item">
+          <span>Teams</span>
+          <i>
+            <img src="./public/icon/arrow-bottom.svg" alt="Logo items" aria-label="Logo items">
+          </i>
+        </li>
 
+        <li class="menu__item">
+          <span>Individuals</span>
+          <i>
+            <img src="./public/icon/arrow-bottom.svg" alt="Logo items" aria-label="Logo items">
+          </i>
+        </li>
 
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+        <li class="menu__item">
+          <span>Download</span>
+          <i>
+            <img src="./public/icon/arrow-bottom.svg" alt="Logo items" aria-label="Logo items">
+          </i>
+        </li>
+
+        <li class="menu__item">
+          <span>Pricing</span>
+        </li>
+
+        <div class="menu__item menu__item--separator">
+          <menu class="sub-menu">
+            <li class="menu__item menu__separator">Request a demo</li>
+            <li></li>
+            <li class="menu__item menu__separator">Log in</li>
+            <li class="menu__item menu__separator">Get Notion Free</li>
+          </menu>
+        </div>
+      </menu>
+    </nav>
+
+    <section class="header__information">
+      <div class="information">
+        <h1 class="information__title">The happier workspace</h1>
+        <h2 class="information__subtitle">
+          Write. Plan. Collaborate. With a little help from AI.
+        </h2>
+          <div class="information__buttons-container">
+            <button class="information__button information__button--get">Get Notion free</button>
+            <button class="information__button information__button--demo">Request a demo</button> 
+          </div>
+          <span class="information__teams">Trusted by teams at</span>
+          <div class="information__logos">
+
+            <img src="./public/svg/headSpace.svg" alt="logo de headSpace" aria-label="Logo de headSpace" class="information__items">
+
+            <img src="./public/svg/remote.svg" alt="logo de remote" aria-label="Logo de remote" class="information__items">
+
+            <img src="./public/svg/password.svg" alt="logo de password" aria-label="Logo de password" class="information__items">
+
+            <img src="./public/svg/figma.svg" alt="logo de figma" aria-label="Logo de Figma" class="information__items information__items--figma">
+          </div>
+      </div>
+
+      <div class="video-principal">
+        <video class="video-principal__video" autoplay muted loop>
+          <source src="./public/videos/hero-banner.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </section>
+
+  </header>
+
+  <main class="main">
+  </main>
+
+  <footer class="footer">
+
+  </footer>
+
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
