@@ -1,0 +1,117 @@
+.tools {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    font-style: normal;
+  
+    .general-tools {
+      width: 50%;
+  
+      &__title {
+        font-size: 61px;
+        font-weight: 700;
+        line-height: 65px;
+        letter-spacing: -0.02em;
+        color: #1a1a19;
+        width: 80%;
+      }
+  
+      &__subtitle {
+        display: block;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        color: #77726e;
+        width: 85%;
+        padding: 10px 0;
+      }
+  
+      &__link {
+        display: block;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        color: #087fe7;
+        text-decoration: none;
+      }
+    }
+  
+    .tools-interactive {
+      width: 50%;
+      display: flex;
+      align-items: flex-end;
+  
+      &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+  
+      &__tile {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 23px;
+        letter-spacing: -0.02em;
+        color: #1a1a19;
+        margin-top: 10px;
+      }
+  
+      &__description {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 23px;
+        letter-spacing: -0.02em;
+        color: #77726e;
+      }
+  
+      &__video {
+        background-color: chocolate;
+        width: 37%;
+      }
+    }
+  
+    &__multimedia {
+      margin-top: 30px;
+  
+      video {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+  
+    &__competitors {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 23px;
+      justify-content: center;
+      color: #77726e;
+      margin-bottom: 100px;
+  
+      h4 {
+        color: #1a1a19;
+      }
+  
+      i {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+  
+        &__logo {
+          width: 30px;
+          height: 30px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  
+  .tools-general-brain {
+    margin: 200px auto;
+  }
+  

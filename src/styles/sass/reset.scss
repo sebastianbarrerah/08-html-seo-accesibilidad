@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
-html{
+html body{
     font-family: "Inter", serif;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 138px;
+    font-style: normal;
+    width: 100%;
 }
