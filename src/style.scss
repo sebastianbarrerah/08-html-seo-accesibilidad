@@ -4,187 +4,141 @@
 @use './styles/tools.scss';
 @use './styles/service.scss';
 @use './styles/template.scss';
-
-
+@use './styles/sass/mixins.scss' as mixins;
+@use './styles/sass/variables.scss' as variables;
+@use './styles/sass/herencias.scss';
 
 .main {
-    width: 1252px;
+    @include mixins.size(1252px, 100vh);
     margin: 0px 188px;
-    height: 100vh;
-   
 
     .quote {
-        background-color: #f6f5f4;
+        @include mixins.flex-style(column);
+        background-color: variables.$color-cards;
         padding: 60px;
-        max-width: -moz-fit-content;
         max-width: fit-content;
         margin: auto;
         transform: rotate(-3deg);
-        will-change: transform;
-        backface-visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         position: relative;
         margin: 130px auto;
 
         &__image {
-            height: auto;
+            @include mixins.position(absolute, auto, auto, 80%, 45%);
+            @include mixins.size(65px, auto);
             object-fit: contain;
-            position: absolute;
-            bottom: 80%;
-            left: 45%;
-            width: 65px;
         }
 
         &__reviews {
-            font-size: 43px;
-            font-weight: 500;
-            line-height: 50px;
-            letter-spacing: -.02em;
-            color: #1a1a19;
+            @include mixins.text-style(43px, 500, normal, 50px, -.02em);
+            color: variables.$black-light;
             font-family: lyon-text, lyon-display, serif;
             padding: 35px;
         }
 
         &__image--forbes {
-            height: auto;
-            width: 70px;
+            @include mixins.size(70px, auto);
+            @include mixins.position(absolute, auto, auto, 20%, 45%);
             object-fit: contain;
-            position: absolute;
-            bottom: 20%;
-            left: 45%;
-            transform: rotate(3deg);
+            transform: rotate(-1deg);
         }
 
     }
 
     .features {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
+        @include mixins.flex-style(column, nowrap, 40px);
         margin-top: 200px;
 
         &__title {
-            font-size: 61px;
-            font-weight: 700;
-            line-height: 65px;
-            letter-spacing: -.02em;
-            color: #1a1a19;
+            @include mixins.text-style(61px, 700, normal, 65px, -.02em);
+            color: variables.$black-light;
         }
 
         &__container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 10px;
-            width: 100%;
+            @include mixins.size(100%, auto);
+            @include mixins.flex-style(row, wrap, 10px);
             justify-content: space-between;
         }
 
         .feature__card {
-            width: 20%;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            @include mixins.size(20%, auto);
+            @include mixins.flex-style(column, nowrap, 10px);
 
-            img {
-                width: 90px;
+            & img {
+                @include mixins.size(90px, auto);
             }
 
-            video {
-                width: 90px;
+            & video {
+                @include mixins.size(90px, auto);
             }
 
             .feature__link {
+                @include mixins.text-style(18px, 600, normal, 24px, -.02em);
+                @include mixins.flex-style(column, nowrap, 5px);
                 text-decoration: none;
-                display: flex;
-                flex-direction: column;
-                color: #5f5c58a5;
-                gap: 5px;
-                font-size: 18px;
-                font-weight: 600;
-                line-height: 24px;
-                letter-spacing: -.02em;
-                font-style: normal;
+                color: variables.$color-footer-copyright;
+                margin-bottom: 15px;
 
-                span {
-                    font-weight: 700;
-                    font-size: 26px;
-                    line-height: 29px;
-                    letter-spacing: -.02em;
-                    font-style: normal;
-                    color: #1a1a19;
+                & span {
+                    @include mixins.text-style(26px, 700, normal, 29px, -.02em);
+                    color: variables.$black-light;
                 }
             }
         }
     }
 
     .started {
-        display: flex;
-        flex-wrap: wrap;
+        @include mixins.flex-style(row, wrap);
         margin-top: 200px;
         justify-content: space-between;
 
         &__title {
-            font-size: 61px;
-            font-weight: 700;
-            line-height: 65px;
-            letter-spacing: -.02em;
-            color: #1a1a19;
-            font-style: normal;
-            width: 100%;
+            @include mixins.text-style(61px, 700, normal, 65px, -.02em);
+            @include mixins.size(100%, auto);
+            color: variables.$black-light;
             margin-bottom: 50px;
         }
 
         &__cards {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            width: 49%;
-            background-color: #f6f5f4;
+            @include mixins.size(49%, auto);
+            @include mixins.flex-style(column, nowrap, 10px);
+            background-color: variables.$color-card-started;
             border-radius: 12px;
             padding: 35px 0 0 40px;
 
-            h6 {
-                font-size: 45px;
-                font-weight: 600;
-                line-height: 50px;
-                letter-spacing: -.02em;
-                color: #1a1a19;
-                font-style: normal;
+            & h6 {
+                @include mixins.text-style(45px, 600, normal, 50px, -.02em);
+                color: variables.$black-light;
                 margin-bottom: 10px;
             }
 
-            .started__buttons{
-                display: flex;
-                gap: 10px;
+            .started__buttons {
+                @include mixins.flex-style(row, nowrap, 10px);
                 margin-bottom: 45px;
-                .startted__button{
-                    font-size: 16px;
-                    font-weight: 600;
-                    line-height: 23px;
+
+                .startted__button {
+                    @include mixins.text-style(16px, 600, normal, 23px);
+                    @include mixins.radius-cursor(8px, pointer);
                     padding: 10px 25px 12px 25px;
-                    border-radius: 8px;
                     border: none;
-                    cursor: pointer;
-                    background-color: #fff;
+                    background-color: variables.$primary-color;
                 }
-                
-                .startted__button--free{
-                    background-color: #0582ff;
-                    color: #ffffff;
+
+                .startted__button--free {
+                    background-color: variables.$blue;
+                    color: variables.$primary-color;
                 }
-                .startted__button--free:hover{
-                    background-color: #045ac3;
+
+                .startted__button--free:hover {
+                    background-color: variables.$hover-blue;
                 }
-                
+
             }
-            .startted__button:hover{
-                background-color: #eaeaea;
+
+            .startted__button:hover {
+                background-color: variables.$hover-white;
             }
         }
     }
 
-    
+
 }

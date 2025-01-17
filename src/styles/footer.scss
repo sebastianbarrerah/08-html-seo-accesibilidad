@@ -1,39 +1,39 @@
+@use './sass/mixins.scss' as mixins;
+@use './sass/variables.scss' as variables;
+
 .footer {
+    @include mixins.size(100%, auto);
+    @include mixins.position(absolute, 555rem, auto, auto, 0);
     display: grid;
-    width: 100%;
     grid-template-columns: repeat(5, 1fr);
     gap: 50px;
-    position: absolute;
-    top: 555rem;
-    left: 0;
-    border-top: 1px solid #b7b7b77f;
+    border-top: 1px solid variables.$color-border-top;
     padding: 100px 200px 80px 350px;
   
     &__column {
-      font-size: 15px;
-      font-weight: 500;
-      color: #1a1a19;
+      @include mixins.text-style(15px, 500, normal);
+      color: variables.$black-light;
   
-      h4 {
+      & h4 {
         margin-bottom: 10px;
         font-weight: bold;
       }
   
-      menu {
+      & menu {
         list-style: none;
         padding: 0;
         margin: 0;
   
-        li {
+        & li {
           margin-bottom: 5px;
   
-          a {
+          & a {
             text-decoration: none;
-            color: #5f5c58;
+            color: variables.$color-footer-copyright;
   
             &:hover {
               text-decoration: underline;
-              color: #045ac3;
+              color: variables.$hover-blue;
             }
           }
         }
@@ -41,41 +41,39 @@
     }
   
     &__logo {
-      width: 25px;
+      @include mixins.size(25px, auto);
       margin-bottom: 20px;
     }
   
     &__logo-notion {
-      width: 135px;
+      @include mixins.size(135px, auto);
       margin-bottom: 20px;
     }
   
     &__socials {
-      display: flex;
+      @include mixins.flex-style(row, nowrap, 10px);
       align-items: center;
-      gap: 10px;
       margin-bottom: 20px;
   
-      a {
+      & a {
+        @include mixins.text-style(14px, 500, normal);
         text-decoration: none;
-        font-size: 14px;
-        color: #5f5c58;
+        color: variables.$color-footer-copyright;
       }
     }
   
     &__language {
+      @include mixins.text-style(16px, 500, normal);
+      @include mixins.radius-cursor(5px, default);
       margin-bottom: 20px;
       padding: 7px 15px;
-      border-radius: 5px;
-      font-size: 16px;
-      font-weight: 500;
     }
   
     &__link {
+      @include mixins.text-style(14px, 500, normal);
       display: block;
       text-decoration: none;
-      color: #5f5c58;
-      font-weight: 500;
+      color: variables.$color-footer-copyright;
       margin-bottom: 5px;
     }
   
@@ -83,23 +81,23 @@
       display: inline-block;
       margin-top: 10px;
       text-decoration: none;
-      color: black;
+      color: variables.$color-black;
       font-weight: bold;
   
       &:hover {
         text-decoration: underline;
-        color: #045ac3;
+        color: variables.$hover-blue;
       }
     }
   
     &__copyright {
-      font-size: 14px;
-      font-weight: 700;
+      @include mixins.text-style(14px, 700, normal);
+      color: variables.$color-black;
     }
   
-    p {
+    & p {
+      @include mixins.text-style(12px, 500, normal);
       margin-top: 20px;
-      font-size: 12px;
-      color: #5f5c58;
+      color: variables.$color-footer-copyright;
     }
   }
